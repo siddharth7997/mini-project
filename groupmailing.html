@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head><center><h1>GROUP MAILING PORTAL</h1></center><br>
+    <style>body {
+    background-image: url('http://www.designbolts.com/wp-content/uploads/2013/02/Pineapple-cut-Grey-Seamless-Pattern-For-Website-Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size:cover;
+	}</style></head>
+    <body><center>
+        <div>
+            <form method="post" action="mail.php" enctype="multipart/form-data">
+             <p>NAME<input type="text" name="name"></p>
+             <p>EMAIL<input type="text" name="sender"></p>
+             <p>SUBJECT<input type="text" name="subject"></p>
+             <p>Upload the textfile having Mail Ids<br><input type="file" name="uploaded" id="fileToUpload"></p>
+             <p><TEXTAREA COLS=100 ROWS=15 placeholder="enter your msg here..." style="color:blue;" NAME="message" COLS=40 ROWS=6></TEXTAREA></p>   
+            <p><input type="submit"></p>
+            </form>
+        </div></center>
+    </body>
+</html>
