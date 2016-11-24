@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<title>HOMEPAGE</title>
+	<h1><big><big><center><b>WELCOME TO SPELLCHECKER</b></center></big></big></h1>
+	</head>
+	<style>
+	body {
+    background-image: url('http://www.designbolts.com/wp-content/uploads/2013/02/Pineapple-cut-Grey-Seamless-Pattern-For-Website-Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size:cover;
+	}
+		#sid
+		{width:100%;
+		word-wrap: break-word;
+		color:blue;
+		}
+		#txt
+		{color:blue;
+			text-align:right;
+				border:black;
+				border-width:1px;
+		}
+	</style>
+	<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML=today;
+    var t = setTimeout(startTime,1000);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+	<body onload="startTime()">
+		<div id="txt"></div>
+	<h1>Enter your name</h1>
+	<div>
+	<form method="post" action="spell_assarray.php">
+	<p><input type="text" name="username"></p>
+	<p><h2>Choose the language</h2></p>
+	<p><input type="radio" name="language" value="english" checked="checked">English<br>
+	<input type="radio" name="language" value="french" >FRENCH<br>
+	<input type="radio" name="language" value="german" >GERMAN<br>
+	<input type="radio" name="language" value="portugese" >PORTUGESE<br>
+	<input type="radio" name="language" value="spanish" >SPANISH(espanol)<br>
+	</p> 
+	
+	<p><TEXTAREA placeholder="enter your txt here............." style="color:blue;" NAME="comments" COLS=150 ROWS=35></TEXTAREA></p>
+	<input value="SPELLCHECK" type="submit">
+	</form>
+    </div
+	</body>
+	</html>
